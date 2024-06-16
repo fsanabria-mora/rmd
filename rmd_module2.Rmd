@@ -96,3 +96,35 @@ Here is an example of code in a blockquote:
 
 >     2+2
 >     mean(c(1,2,3,4,5))
+
+
+## Gráfica
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+
+#echo=FALSE impide que se muestre el código que genera el gráfico
+```
+
+```{r pressure2, fig.width=4, fig.height=4}
+plot(pressure)
+
+#tamaño de la figura = 4x4 pulgadas
+##como no se especificó echo=FALSE, se mostrará el código que genera la figura
+###estas opciones también pueden cambiarse desde el ícono de engranaje de cada chunk
+```
+
+##Tabla
+
+```{r tablas, echo=FALSE}
+head(cars)
+knitr::kable(head(cars), 
+             caption = "top six rows of cars dataset")
+
+#la función kable se usa para construir tablas
+```
+
+##Ecuaciones
+
+$$ Y = \beta_0 + \beta1x $$
+Esta escritura de ecuaciones utiliza el formato de LaTeX.
